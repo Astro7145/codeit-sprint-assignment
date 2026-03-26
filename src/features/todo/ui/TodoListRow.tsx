@@ -11,7 +11,7 @@ export default function TodoListRow() {
 				<Checkbox />
 				<Link
 					href={`/1`}
-					className="text-base font-normal text-slate-800 group-has-checked:line-through"
+					className="text-base font-normal text-slate-800 group-has-checked:line-through hover:underline"
 				>
 					비타민 챙겨 먹기
 				</Link>

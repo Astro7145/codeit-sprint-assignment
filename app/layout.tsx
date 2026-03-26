@@ -40,7 +40,7 @@ export default function RootLayout({
 		>
 			<body className="flex flex-col items-center h-full">
 				<Appbar />
-				<main className="mt-(--header-height) w-full h-full max-w-300 px-6">
+				<main className="mt-(--header-height) w-full h-full max-w-300">
 					{children}
 				</main>
 			</body>

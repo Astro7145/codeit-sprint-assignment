@@ -17,7 +17,6 @@ export default function AddButton({ disabled }: AddButtonProps) {
 			<span className="hidden text-base font-bold text-white group-disabled:text-slate-900 mobile:inline text-nowrap">
 				추가하기
 			</span>
-			<span className="w-full h-full rounded-full bg-slate-900 absolute top-1 left-[3.65px] -z-10" />
 		</button>
 	);
 }

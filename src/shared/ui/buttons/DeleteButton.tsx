@@ -5,10 +5,11 @@ import { XIcon } from "@/src/shared/icons";
  */
 export default function DeleteButton() {
 	return (
-		<button className="relative flex items-center justify-center gap-x-1 border-2 border-slate-900 rounded-full py-4.5 px-10.5 bg-rose-500  cursor-pointer">
+		<button className="relative flex items-center justify-center gap-x-1 border-2 border-slate-900 rounded-full py-4.5 px-4.5 mobile:px-10.5 bg-rose-500  cursor-pointer">
 			<XIcon />
-			<span className="text-base font-bold text-white">삭제하기</span>
-			<span className="w-full h-full rounded-full bg-slate-900 absolute top-1 left-[3.65px] -z-10" />
+			<span className="hidden text-base font-bold text-white text-nowrap mobile:inline">
+				삭제하기
+			</span>
 		</button>
 	);
 }

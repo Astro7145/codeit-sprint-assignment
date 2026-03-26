@@ -10,14 +10,13 @@ interface EditButtonProps {
 export default function EditButton({ disabled }: EditButtonProps) {
 	return (
 		<button
-			className="relative flex items-center justify-center gap-x-1 border-2 border-slate-900 rounded-full py-4.5 px-10.5 bg-lime-300 disabled:bg-slate-200 cursor-pointer disabled:cursor-not-allowed"
+			className="relative flex items-center justify-center gap-x-1 border-2 border-slate-900 rounded-full py-4.5 px-4.5 mobile:px-10.5 bg-lime-300 disabled:bg-slate-200 cursor-pointer disabled:cursor-not-allowed"
 			disabled={disabled}
 		>
 			<CheckIcon className="stroke-slate-900" />
-			<span className="text-base font-bold text-slate-900">
+			<span className="hidden text-base font-bold text-slate-900 text-nowrap mobile:inline">
 				수정 완료
 			</span>
-			<span className="w-full h-full rounded-full bg-slate-900 absolute top-1 left-[3.65px] -z-10" />
 		</button>
 	);
 }
