@@ -6,3 +6,10 @@ export interface TodoItem {
 	imageUrl?: string;
 	isCompleted: boolean;
 }
+
+export interface TodoRequest {
+	name: string;
+	memo: string;
+	imageUrl: string;
+	isCompleted: boolean;
+}

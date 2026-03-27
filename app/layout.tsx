@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Appbar } from "@/src/widgets";
+import { QueryProvider } from "@/src/shared";
 
 const nanumSquare = localFont({
 	src: [
@@ -34,16 +35,18 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html
-			lang="en"
-			className={`${nanumSquare.className} h-full antialiased bg-gray-50`}
-		>
-			<body className="flex flex-col items-center h-full">
-				<Appbar />
-				<main className="mt-(--header-height) w-full h-full max-w-300">
-					{children}
-				</main>
-			</body>
-		</html>
+		<QueryProvider>
+			<html
+				lang="en"
+				className={`${nanumSquare.className} h-full antialiased bg-gray-50`}
+			>
+				<body className="flex flex-col items-center h-full">
+					<Appbar />
+					<main className="mt-(--header-height) w-full h-full max-w-300">
+						{children}
+					</main>
+				</body>
+			</html>
+		</QueryProvider>
 	);
 }
