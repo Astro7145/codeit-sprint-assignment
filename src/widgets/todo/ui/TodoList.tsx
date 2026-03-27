@@ -1,10 +1,9 @@
 "use client";
 
-import { TodoListRow } from "@/src/features";
+import { getTodoList, TodoListRow } from "@/src/features";
 import { TodoItem } from "@/src/shared";
 import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
-import { getTodoList } from "../api";
 
 interface TodoListProps {
 	isCompleted: boolean;
@@ -15,7 +14,10 @@ export default function TodoList({ isCompleted }: TodoListProps) {
 		queryKey: ["todoList"],
 		queryFn: () => getTodoList<TodoItem[]>(),
 		select: (data) =>
-			data.filter((item) => item.isCompleted === isCompleted),
+			// todo의 완료 여부에 따라 todo와 done을 구분하고, id를 기준으로 내림차순 정렬 하여 최신 항목이 상단에 오도록 함
+			data
+				.filter((item) => item.isCompleted === isCompleted)
+				.sort((a, b) => b.id - a.id),
 	});
 
 	return (

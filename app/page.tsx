@@ -1,6 +1,6 @@
 import { getQueryClient, TodoItem } from "@/src/shared";
 import { TodoHome } from "@/src/views";
-import { getTodoList } from "@/src/widgets";
+import { getTodoList } from "@/src/features";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 
 export default async function Page() {

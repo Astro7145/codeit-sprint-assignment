@@ -9,7 +9,7 @@ export default function Checkbox({ checked, onChange }: CheckboxProps) {
 			type="checkbox"
 			checked={checked}
 			onChange={(e) => onChange?.(e.target.checked)}
-			className="transition-all h-8 w-8 appearance-none bg-[url('/icons/checkbox_off.svg')] checked:bg-[url('/icons/checkbox_on.svg')] bg-no-repeat bg-center cursor-pointer"
+			className="shrink-0 transition-all h-8 w-8 appearance-none bg-[url('/icons/checkbox_off.svg')] checked:bg-[url('/icons/checkbox_on.svg')] bg-no-repeat bg-center cursor-pointer"
 		/>
 	);
 }

@@ -62,14 +62,14 @@ export default function TodoListRow({ todoId, content }: TodoListRowProps) {
 
 	return (
 		<div className="group w-full h-12.5 bg-white border-2 border-slate-900 rounded-full pl-3 flex items-center has-checked:bg-violet-100 transition-all">
-			<span className="flex items-center gap-x-4">
+			<span className="flex items-center gap-x-4 w-full">
 				<Checkbox
 					checked={isCompleted}
 					onChange={handleCompletedChange}
 				/>
 				<Link
 					href={`/${todoId}`}
-					className="text-base font-normal text-slate-800 group-has-checked:line-through hover:underline"
+					className="text-base font-normal text-slate-800 group-has-checked:line-through hover:underline truncate"
 				>
 					{name}
 				</Link>
