@@ -8,8 +8,12 @@ export interface TodoItem {
 }
 
 export interface TodoRequest {
-	name: string;
-	memo: string;
-	imageUrl: string;
-	isCompleted: boolean;
+	name?: string;
+	memo?: string;
+	imageUrl?: string;
+	isCompleted?: boolean;
+}
+
+export interface ImageResponse {
+	url: string;
 }

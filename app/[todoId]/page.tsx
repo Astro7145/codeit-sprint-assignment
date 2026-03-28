@@ -1,4 +1,7 @@
+import { getTodoById } from "@/src/features";
+import { getQueryClient, TodoItem } from "@/src/shared";
 import { TodoDetail } from "@/src/views";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 
 export default async function Page({
 	params,
@@ -7,5 +10,16 @@ export default async function Page({
 }) {
 	const { todoId } = await params;
 
-	return <TodoDetail todoId={Number(todoId)} />;
+	const queryClient = getQueryClient();
+
+	await queryClient.prefetchQuery({
+		queryKey: ["todoItem", todoId],
+		queryFn: () => getTodoById<TodoItem>(Number(todoId)),
+	});
+
+	return (
+		<HydrationBoundary state={dehydrate(queryClient)}>
+			<TodoDetail todoId={Number(todoId)} />
+		</HydrationBoundary>
+	);
 }

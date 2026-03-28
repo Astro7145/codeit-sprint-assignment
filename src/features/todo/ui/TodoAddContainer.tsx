@@ -50,7 +50,7 @@ export default function TodoAddContainer() {
 		onSettled: () => {
 			queryClient.invalidateQueries({ queryKey: ["todoList"] });
 
-			// todo 추가 후 input 초기화
+			// 만일 todo 추가에 실패했을 경우를 대비하여 실제로 데이터 반영이 완료된 후 인풋 필드 초기화
 			setTodoName("");
 		},
 	});

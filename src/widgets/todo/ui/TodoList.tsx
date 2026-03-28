@@ -39,7 +39,7 @@ export default function TodoList({ isCompleted }: TodoListProps) {
 						<TodoListRow
 							key={todo.id}
 							todoId={todo.id}
-							content={{
+							todoData={{
 								name: todo.name,
 								memo: todo.memo || "",
 								imageUrl: todo.imageUrl || "",
