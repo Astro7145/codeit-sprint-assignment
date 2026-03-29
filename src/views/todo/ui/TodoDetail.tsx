@@ -61,7 +61,7 @@ export default function TodoDetail({ todoId }: TodoDetailProps) {
 				onChangeName={handleNameChange}
 				onChangeIsCompleted={handleIsCompletedChange}
 			/>
-			<div className="flex flex-col tablet:flex-row w-full gap-x-6">
+			<div className="flex flex-col tablet:flex-row w-full gap-y-4 mobile:gap-y-6 gap-x-6">
 				<ImageContainer
 					imageUrl={todo?.imageUrl || ""}
 					onChangeImageUrl={handleImageUrlChange}
