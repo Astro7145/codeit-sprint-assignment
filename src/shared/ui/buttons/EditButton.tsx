@@ -70,7 +70,12 @@ export default function EditButton({
 	}, [todoData, initialData]);
 
 	const handleSubmit = () => {
-		if (todoData) mutate(todoData);
+		if (todoData) {
+			const filteredData = Object.fromEntries(
+				Object.entries(todoData).filter(([_, value]) => value != null),
+			);
+			mutate(filteredData);
+		}
 	};
 
 	return (

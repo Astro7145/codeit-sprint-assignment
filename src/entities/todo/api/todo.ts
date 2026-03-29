@@ -4,6 +4,7 @@ export async function updateTodo<T>(
 	todoId: number,
 	todo: TodoRequest,
 ): Promise<T> {
+	console.log("data:", todo);
 	const res = await fetch(
 		process.env.NEXT_PUBLIC_REST_API_URL + "/items/" + todoId,
 		{
