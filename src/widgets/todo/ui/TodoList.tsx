@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 
 interface TodoListProps {
+	/**@param {boolean} isCompleted todo 리스트와 done 리스트를 구분하기 위한 prop */
 	isCompleted: boolean;
 }
 

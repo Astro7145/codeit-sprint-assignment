@@ -5,7 +5,10 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 
 interface TodoListRowProps {
+	/**@param {number} todoId 각 todo 항목의 id */
 	todoId: number;
+
+	/**@param {TodoRequest} todoData 각 todo 항목의 데이터 */
 	todoData: TodoRequest;
 }
 

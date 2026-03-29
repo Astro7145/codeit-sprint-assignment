@@ -1,8 +1,11 @@
-import { PictureAddButton } from "@/src/shared";
+import { PictureButton } from "@/src/shared";
 import Image from "next/image";
 
 interface ImageContainerProps {
+	/**@param {string} imageUrl 이미지 URL */
 	imageUrl: string;
+
+	/**@param {function} onChangeImageUrl 이미지 URL이 변경될 때 호출되는 함수 */
 	onChangeImageUrl: (imageUrl: string) => void;
 }
 
@@ -23,7 +26,7 @@ export default function ImageContainer({
 				fill
 				objectFit="none"
 			/>
-			<PictureAddButton
+			<PictureButton
 				className="absolute bottom-4 right-4"
 				setImageUrl={onChangeImageUrl}
 				isImageExists={!!imageUrl.trim()}

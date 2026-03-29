@@ -6,17 +6,22 @@ import { cn } from "@/src/shared/lib";
 import { uploadImage } from "@/src/features";
 import { ImageResponse } from "../../types";
 
-interface PictureAddButtonProps {
+interface PictureButtonProps {
+	/**@param {string} className 버튼의 추가적인 클래스 이름 */
 	className?: string;
+
+	/**@param {function} setImageUrl 이미지 URL을 설정하는 함수 */
 	setImageUrl: (url: string) => void;
+
+	/**@param {boolean} isImageExists 이미지가 존재하는지 여부, 버튼의 스타일을 결정하는 데 사용 */
 	isImageExists?: boolean;
 }
 
-export default function PictureAddButton({
+export default function PictureButton({
 	className,
 	setImageUrl,
 	isImageExists,
-}: PictureAddButtonProps) {
+}: PictureButtonProps) {
 	const imageInputRef = useRef<HTMLInputElement>(null);
 
 	const handleButtonClick = () => {

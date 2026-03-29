@@ -1,6 +1,11 @@
 interface TodoInputProps {
+	/**@param {string} text 입력된 텍스트 값 */
 	text?: string;
+
+	/**@param {function} onChange 텍스트 값이 변경될 때 호출되는 함수 */
 	onChange?: (value: string) => void;
+
+	/**@param {function} onPressEnter 엔터 키가 눌렸을 때 호출되는 함수 */
 	onPressEnter?: () => void;
 }
 

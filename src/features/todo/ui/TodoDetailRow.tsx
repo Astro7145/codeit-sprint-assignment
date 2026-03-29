@@ -3,10 +3,19 @@
 import Checkbox from "@/src/shared/ui/checkbox/Checkbox";
 
 interface TodoDetailRowProps {
+	/**@param {string} name todo의 이름 */
 	name: string;
+
+	/**@param {function} onChangeName todo의 이름이 변경될 때 호출되는 함수 */
 	onChangeName: (name: string) => void;
+
+	/**@param {boolean} isCompleted todo의 완료 상태 */
 	isCompleted: boolean;
+
+	/**@param {function} onChangeIsCompleted todo의 완료 상태가 변경될 때 호출되는 함수 */
 	onChangeIsCompleted: (isCompleted: boolean) => void;
+
+	/**@param {boolean} isLoading 데이터 로딩 상태, 로딩 중에는 입력과 체크박스 변경이 불가능하도록 함 */
 	isLoading: boolean;
 }
 

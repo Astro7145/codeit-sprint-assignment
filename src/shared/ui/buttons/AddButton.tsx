@@ -1,7 +1,10 @@
 import { AddIcon } from "@/src/shared/icons";
 
 interface AddButtonProps {
+	/**@param {boolean} disabled 버튼 비활성화 여부 */
 	disabled?: boolean;
+
+	/**@param {function} onClick 버튼 클릭 시 호출되는 함수 */
 	onClick?: () => void;
 }
 

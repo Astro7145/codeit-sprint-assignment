@@ -23,6 +23,7 @@ export default function TodoDetail({ todoId }: TodoDetailProps) {
 		queryFn: () => getTodoById<TodoItem>(todoId),
 	});
 
+	// 데이터 로딩 완료 후 화면 출력용 todo 상태를 API에서 가져온 데이터로 초기화
 	useEffect(() => {
 		if (data) {
 			setTodo({
@@ -34,6 +35,7 @@ export default function TodoDetail({ todoId }: TodoDetailProps) {
 		}
 	}, [data]);
 
+	// 각 수정된 항목을 해당 항목만 업데이트 하도록 하는 핸들러 함수들
 	const handleNameChange = (name: string) => {
 		setTodo((prev) => (prev ? { ...prev, name } : prev));
 	};

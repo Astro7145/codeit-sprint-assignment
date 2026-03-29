@@ -6,6 +6,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 
 interface DeleteButtonProps {
+	/**@param {number} todoId 삭제할 todo의 id */
 	todoId: number;
 }
 
@@ -35,6 +36,7 @@ export default function DeleteButton({ todoId }: DeleteButtonProps) {
 	});
 
 	const handleTodoDelete = () => {
+		// 잘못 클릭함을 방지하기 위한 삭제 확인창
 		if (confirm("해당 todo를 삭제하시겠습니까?")) mutate();
 	};
 

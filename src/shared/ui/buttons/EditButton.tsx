@@ -9,8 +9,13 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface EditButtonProps {
+	/**@param {number} todoId 수정할 todo의 id */
 	todoId: number;
+
+	/**@param {TodoRequest} todoData 수정 후의 데이터 */
 	todoData?: TodoRequest;
+
+	/**@param {TodoRequest} initialData 수정 전의 데이터, 수정된 데이터와 비교하여 수정 완료 버튼의 활성화 여부 결정 */
 	initialData?: TodoRequest;
 }
 
@@ -71,6 +76,7 @@ export default function EditButton({
 
 	const handleSubmit = () => {
 		if (todoData) {
+			// update API의 body에 null 값을 포함 시켜서 보내면 오류를 응답하므로 null 및 undefined 값 필터링
 			const filteredData = Object.fromEntries(
 				Object.entries(todoData).filter(([_, value]) => value != null),
 			);

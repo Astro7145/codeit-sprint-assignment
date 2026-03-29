@@ -1,6 +1,11 @@
 interface MemoContainerProps {
+	/**@param {string} memo 메모 내용 */
 	memo: string;
+
+	/**@param {function} onChangeMemo 메모 내용이 변경될 때 호출되는 함수 */
 	onChangeMemo: (memo: string) => void;
+
+	/**@param {boolean} isLoading 메모 내용 로딩 중 여부, 로딩 중일 때는 textarea를 비활성화하고 placeholder로 "불러오는 중..."을 표시 */
 	isLoading: boolean;
 }
 
