@@ -3,6 +3,35 @@
 ![Static Badge](https://img.shields.io/badge/typescript-%233178C6?style=for-the-badge&logo=typescript&logoColor=%23FFFFFF)
 ![Static Badge](https://img.shields.io/badge/React_Query-%23FF4154?style=for-the-badge&logo=reactquery&logoColor=%23FFFFFF)
 
+# 프로젝트 설명
+프로젝트 설명에서는 제가 과제를 진행하면서 고민했던 몇 가지 부분들에 대해서 적어가겠습니다.
+
+## FSD 아키텍처
+<img width="303" height="506" alt="image" src="https://github.com/user-attachments/assets/1a3fdbb6-fd8d-41d7-a206-ff8989c67de1" />
+
+우선 이번 프로젝트에서는 FSD 아키텍처를 도입하여 각 컴포넌트들을 관리했습니다. \
+FSD 아키텍처는 규모가 크고 복잡한 프로젝트에 적합하다고 배우긴 했지만, FSD 아키텍처에 대해 경험을 쌓고 감각을 익히고자 채택하게 되었습니다.
+
+## 디자인 시스템
+<img width="278" height="737" alt="image" src="https://github.com/user-attachments/assets/f27b3fea-4c17-4e15-8627-fd003ca85d7b" />
+<img width="409" height="370" alt="image" src="https://github.com/user-attachments/assets/ef13c61f-3a59-425c-b8ea-470b061239df" />
+
+피그마에 명시되어 있는 디자인 시스템에 따라 Tailwind CSS, Next.js의 LocalFont 등을 활용하여 프로젝트에 적용시켰습니다. \
+또한, 각종 버튼 및 인풋 상자 등의 공통 컴포넌트도 프로젝트에 설정된 디자인 시스템을 활용하여 구현할 수 있었습니다. \
+
+<img width="388" height="83" alt="image" src="https://github.com/user-attachments/assets/505482da-696f-4b9c-96a7-d2424fd3c84f" />
+
+하지만 버튼의 음영 부분 등의 복잡한 부분까지 구현하기에는 저의 역량 부족으로 인해 시간이 오래 걸릴 것 같아 최대한 요구사항에만 부합하도록 디테일한 부분들을 생략했습니다.
+
+<img width="692" height="409" alt="image" src="https://github.com/user-attachments/assets/6ab26af9-dbce-43be-9676-f3fe61b3c2ad" />
+
+디자인 시스템에 명시된 아이콘 부분은 대체적으로 컴포넌트화 시켜서 활용했습니다.
+이런 방식을 사용하면 아이콘의 크기나 색상 등을 유동적으로 변경할 수 있기에 자주 활용하고 있습니다.
+
+## SSR & CSR
+
+
+
 # 사용 설명
 접속 링크 - 
 
